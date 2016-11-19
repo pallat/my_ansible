@@ -1,0 +1,6 @@
+---
+	- name:
+		hosts: local
+		tasks:
+			- name: install wget
+			  command: apt-get install wget

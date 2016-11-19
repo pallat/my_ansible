@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - shell: echo "hello world"
+    - command: apt-get -y install nodejs npm
+    - shell: ln -s /usr/bin/nodejs /usr/bin/node
+
