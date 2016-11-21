@@ -1,0 +1,26 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - shell: echo "hello world"
+    - apt:
+        update_cache: yes
+    - apt:
+        name: nodejs
+    - apt:
+        name: npm
+    # - apt:
+    #     name: python-apt
+    # - apt:
+    #     name: aptitude
+    - file: src=/usr/bin/nodejs dest=/usr/bin/node owner=root group=root state=link
+    - get_url:
+        url: https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
+        dest: /root
+        mode: 0440
+    - unarchive: src=go1.6.3.linux-amd64.tar.gz dest=/
+    - get_url:
+        url: https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+        dest: /root
+        mode: 0755
+    - command: sh -c /root/install.sh

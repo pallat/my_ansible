@@ -1,5 +1,7 @@
 FROM ansible/ubuntu14.04-ansible
 
 RUN apt-get -y install vim
-RUN mkdir scripts
-ADD pallat.txt /scripts
+WORKDIR /root
+COPY pallat.yml /root/pallat.yml
+COPY run.sh /root/run.sh
+RUN chmod +x run.sh
