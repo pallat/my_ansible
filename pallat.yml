@@ -24,3 +24,32 @@
         dest: /root
         mode: 0755
     - command: sh -c /root/install.sh
+
+
+#------------all step------------
+# download google-chrome
+# install google-chrome
+# sudo apt install git
+# sudo apt install zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# mkdir workspace
+# cd workspace
+# git clone git@10.89.104.22:omr/omr.git
+
+# --nodejs--
+# curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+# sudo apt-get install -y nodejs
+
+# sudo apt-get install python-pip
+# pip install virtualenv
+# virtualenv omr
+
+# cd ~/workspace/omr/robot
+# source ~/omr/bin/activate
+# pip install -r requirements.pip
+# sudo npm install -g chromedriver
+
+# cd ~/workspace/omr/web
+# npm install
+
+# sudo npm install -g grunt-cli
